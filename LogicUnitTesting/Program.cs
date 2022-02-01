@@ -1,7 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
-using LogicUnitTesting;
+﻿using LogicUnitTesting;
+
 Console.WriteLine("Hello, Welcome to Nunit testing progamming");
-Console.WriteLine("1. Vending Machine \n2. Temperatures Conversion \n3. Finding SquareRoot");
+Console.WriteLine("1. Vending Machine \n2. Temperatures Conversion \n3. Finding SquareRoot \n4. Finding Day on Date");
 int option = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Press  's'   to start programe and 'n' to stop progrme");
 char ch = Convert.ToChar(Console.ReadLine()); 
@@ -31,5 +31,20 @@ while(ch != 'n')
             double num2 = 0.00001;
             sqroot.squareRoot(num, num2);
             break;
+        case 4:
+            DayWeek dayWeek = new DayWeek();
+            Console.WriteLine("Enter date:");
+            int date = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter month:");
+            int months = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter year:");
+            int years = Convert.ToInt32(Console.ReadLine());
+            dayWeek.Calander(date, months, years);
+            break;
+        default:
+            Console.WriteLine("Please choose from given Option...! ");
+            break;
     }
+    Console.WriteLine("Please enter n to stop your programe or press any key to do programe...!");
+    ch = Convert.ToChar(Console.ReadLine());
 }
